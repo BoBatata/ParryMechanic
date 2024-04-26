@@ -50,6 +50,34 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "Combat",
+            "id": "fd1dbd80-88ab-4929-9ee0-f428d6749abd",
+            "actions": [
+                {
+                    "name": "Parry",
+                    "type": "Button",
+                    "id": "769c1033-a601-4aed-bcf3-46919b4be2af",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ad7ab5e4-b73d-4db0-bd32-e792a0a32917",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Parry",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
