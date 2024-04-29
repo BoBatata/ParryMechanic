@@ -15,9 +15,7 @@ public class ParryBehavior : MonoBehaviour
 
     private void Start()
     {
-        playerInputs = PlayerBehavior.instance.playerinputs;
-        playerInputs.Combat.Parry.started += ParryHandler;
-        playerInputs.Combat.Parry.canceled += ParryHandler;
+        GameManager.Instance.inputManager.OnParry += ParryHandler;  
     }
 
     private void Update()
@@ -27,13 +25,13 @@ public class ParryBehavior : MonoBehaviour
         print(parryPressed);
     }
 
-    private void ParryHandler(InputAction.CallbackContext inputContext)
+    private void ParryHandler(bool isParrying)
     {
-        if (inputContext.started)
+        if (isParrying)
         {
             parryPressed = true;
         }
-        else if (!inputContext.started)
+        else if (!isParrying)
         {
             parryPressed = false;
         }
@@ -48,6 +46,7 @@ public class ParryBehavior : MonoBehaviour
         }
         else
         {
+            canParry = false;
             parryColor = Color.red;
         }
 
