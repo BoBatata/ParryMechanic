@@ -9,7 +9,7 @@ using UnityEngine.InputSystem;
 public class PlayerBehavior : MonoBehaviour
 {
     public static PlayerBehavior instance;
-    public PlayerInputs playerinputs;
+    //public PlayerInputs playerinputs;
 
     private Vector2 moveDirection;
     [SerializeField] private float velocity = 10;
@@ -19,7 +19,6 @@ public class PlayerBehavior : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        PlayerInputs();
         rigibody = GetComponent<Rigidbody2D>();
     }
 
@@ -39,22 +38,8 @@ public class PlayerBehavior : MonoBehaviour
         {
             transform.rotation = quaternion.identity;
         }
-        moveDirection.x = playerinputs.Movement.Walk.ReadValue<float>();
+        moveDirection.x = GameManager.Instance.inputManager.MoveDirection;
         rigibody.velocity = new Vector2(moveDirection.x * velocity, rigibody.velocity.y);
 
-    }
-    private void PlayerInputs()
-    {
-        playerinputs = new PlayerInputs();
-    }
-
-    private void OnEnable()
-    {
-        playerinputs.Enable();   
-    }
-
-    private void OnDisable()
-    {
-        playerinputs.Disable();
     }
 }
