@@ -8,17 +8,21 @@ using UnityEngine.InputSystem;
 
 public class PlayerBehavior : MonoBehaviour
 {
-    private PlayerInputs playerinputs;
+    public static PlayerBehavior instance;
+    public PlayerInputs playerinputs;
 
     private Vector2 moveDirection;
     [SerializeField] private float velocity = 10;
+    private bool isParrying;
     private Rigidbody2D rigibody;
 
     private void Awake()
     {
-        playerinputs = new PlayerInputs();
+        instance = this;
+        PlayerInputs();
         rigibody = GetComponent<Rigidbody2D>();
     }
+
 
     private void Update()
     {
@@ -38,6 +42,10 @@ public class PlayerBehavior : MonoBehaviour
         moveDirection.x = playerinputs.Movement.Walk.ReadValue<float>();
         rigibody.velocity = new Vector2(moveDirection.x * velocity, rigibody.velocity.y);
 
+    }
+    private void PlayerInputs()
+    {
+        playerinputs = new PlayerInputs();
     }
 
     private void OnEnable()
