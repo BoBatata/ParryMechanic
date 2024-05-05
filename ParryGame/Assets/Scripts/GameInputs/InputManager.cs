@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class InputManager : MonoBehaviour
+public class InputManager
 {
     private PlayerInputs playerInputs;
 
@@ -14,8 +14,7 @@ public class InputManager : MonoBehaviour
     {
         playerInputs = new PlayerInputs();
         playerInputs.Enable();
-        playerInputs.Combat.Parry.performed += ParryPerfomed;
-        playerInputs.Combat.Parry.canceled += ParryPerfomed;
+        playerInputs.Combat.Parry.started += ParryPerfomed;
     }
 
     public void ParryPerfomed(InputAction.CallbackContext context)
