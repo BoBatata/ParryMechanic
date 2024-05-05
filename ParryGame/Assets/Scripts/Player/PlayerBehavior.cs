@@ -11,7 +11,7 @@ public class PlayerBehavior : MonoBehaviour
     public static PlayerBehavior instance;
     //public PlayerInputs playerinputs;
 
-    private Vector2 moveDirection;
+    public Vector2 moveDirection;
     [SerializeField] private float velocity = 10;
     private bool isParrying;
     private Rigidbody2D rigibody;
