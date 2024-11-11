@@ -7,10 +7,11 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField] private Transform attackPoint;
     [SerializeField] private Vector3 attackSize;
     private bool attackArea;
+    private LayerMask attackMask;
 
     private void AttackHandler()
     {
-        attackArea = Physics2D.OverlapBox(attackPoint.position, attackSize, 0);
+        attackArea = Physics2D.OverlapBox(attackPoint.position, attackSize, 0, attackMask);
     }
 
     private void OnDrawGizmos()

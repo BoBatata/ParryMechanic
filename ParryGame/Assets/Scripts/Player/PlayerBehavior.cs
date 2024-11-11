@@ -9,11 +9,11 @@ using UnityEngine.InputSystem;
 public class PlayerBehavior : MonoBehaviour
 {
     public static PlayerBehavior instance;
-    //public PlayerInputs playerinputs;
 
-    public Vector2 moveDirection;
+    [Header("Movement Variables")]
     [SerializeField] private float velocity = 10;
-    private bool isParrying;
+    public Vector2 moveDirection;
+
     private Rigidbody2D rigibody;
 
     private void Awake()
@@ -21,13 +21,10 @@ public class PlayerBehavior : MonoBehaviour
         instance = this;
         rigibody = GetComponent<Rigidbody2D>();
     }
-
-
     private void Update()
     {
         MoveHandler();
     }
-
     private void MoveHandler()
     {
         if (moveDirection.x < 0)

@@ -1,14 +1,23 @@
 {
-    "name": "PlayerInputs",
+    "name": "InputControls",
     "maps": [
         {
-            "name": "Movement",
-            "id": "b5b121d6-b54d-4f7d-9557-86fe206cd0c7",
+            "name": "PlayerActions",
+            "id": "9c2a244d-463c-4081-bc45-5c9afb49a90e",
             "actions": [
                 {
                     "name": "Walk",
                     "type": "Button",
-                    "id": "fa65622c-205b-476d-a933-1d71c2d107af",
+                    "id": "a1d8ea92-b37d-4480-962a-8fb88c4c2f4f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Parry",
+                    "type": "Button",
+                    "id": "69b3a423-fda0-496b-a3e9-74709bb6042c",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -17,8 +26,8 @@
             ],
             "bindings": [
                 {
-                    "name": "AD",
-                    "id": "bead694b-3e28-4f36-a9bb-ee0a34466ab4",
+                    "name": "[Keyboard] AD",
+                    "id": "a269d7c2-0583-4501-ac1d-cf543389c949",
                     "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
@@ -29,7 +38,7 @@
                 },
                 {
                     "name": "negative",
-                    "id": "b94598d6-f8df-403c-860c-247db0413bce",
+                    "id": "d061faa8-d0ef-4304-a38d-c848520cab38",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
@@ -40,7 +49,7 @@
                 },
                 {
                     "name": "positive",
-                    "id": "ac4b56f6-a9da-4125-ba40-488fd265b6e0",
+                    "id": "71b0a408-48c3-4ab4-b2c3-aa4f4b3e7a80",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
@@ -48,27 +57,10 @@
                     "action": "Walk",
                     "isComposite": false,
                     "isPartOfComposite": true
-                }
-            ]
-        },
-        {
-            "name": "Combat",
-            "id": "fd1dbd80-88ab-4929-9ee0-f428d6749abd",
-            "actions": [
-                {
-                    "name": "Parry",
-                    "type": "Button",
-                    "id": "769c1033-a601-4aed-bcf3-46919b4be2af",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                }
-            ],
-            "bindings": [
+                },
                 {
                     "name": "",
-                    "id": "ad7ab5e4-b73d-4db0-bd32-e792a0a32917",
+                    "id": "650a218d-d159-4649-a2eb-ec5ab8a9ad66",
                     "path": "<Keyboard>/x",
                     "interactions": "",
                     "processors": "",

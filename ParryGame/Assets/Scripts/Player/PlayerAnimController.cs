@@ -22,7 +22,7 @@ public class PlayerAnimController : MonoBehaviour
         WalkHandler();
     }
 
-    private void ParryAnimHandler(bool isParrying)
+    private void ParryAnimHandler()
     {
         animator.SetTrigger("parryPressed");    
     }
