@@ -229,6 +229,7 @@ GameObject:
   - component: {fileID: 533855348}
   - component: {fileID: 533855352}
   - component: {fileID: 533855347}
+  - component: {fileID: 533855353}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -411,6 +412,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &533855353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533855346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08516878fb4b7c845a5281990e0bd3cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &592419399
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,7 +679,7 @@ GameObject:
   - component: {fileID: 1742643013}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -685,11 +698,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 10
   moveDirection: {x: 0, y: 0}
-  parryPoint: {fileID: 766306416}
-  parrySize: {x: 1, y: 3}
-  parryMask:
-    serializedVersion: 2
-    m_Bits: 8
 --- !u!50 &1742643008
 Rigidbody2D:
   serializedVersion: 4
